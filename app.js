@@ -2,12 +2,16 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 
+import postRoutes from "./routes/post.js"
+
 const app = express()
 const PORT = 5000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
+app.use("/api/v1/posts", postRoutes)
+
 app.get("/", (req, res) => {
   res.send("Hello from Nodejs")
 })

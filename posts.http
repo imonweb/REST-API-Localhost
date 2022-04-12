@@ -1,0 +1,27 @@
+@mainURL = http://localhost:5000/api/v1/posts
+
+post {{mainURL}}
+Content-Type: application/json 
+
+{
+  "title": "title test one",
+  "desc": "desc test one"
+}
+
+###
+
+get {{mainURL}}
+
+###
+
+get {{mainURL}}/6254c23438d7dffd13d61e8c
+
+###
+
+put {{mainURL}}/6254c23438d7dffd13d61e8c
+Content-Type: application/json
+
+{
+  "title": "title test update",
+  "desc": "desc test update"
+}
